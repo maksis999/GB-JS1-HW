@@ -12,10 +12,11 @@
         'use strict';
 
         let sum = +prompt("Какую сумму Вы желаете положить на счет?");
-        let sumStr = String(sum);
-        let sumLength = sumStr.length;
-        let lastStr = sumStr.charAt(sumLength - 1);
-        let prelastStr = sumStr.charAt(sumLength - 2);
+        let sumStr = String(sum); //перевод числа в строку
+        let sumLength = sumStr.length; //длина строки
+        let lastStr = sumStr.charAt(sumLength - 1); //получаем последнюю цифру из указанной суммы
+        let prelastStr = sumStr.charAt(sumLength - 2); //получаем предпоследнюю цифру из указанной суммы
+        //если предпоследняя цифра не равна 1 тогда заходит в тело условия с switch
         if (prelastStr != 1) {
             switch (lastStr) {
                 case "0":
@@ -24,16 +25,17 @@
                 case "7":
                 case "8":
                 case "9":
-                    alert("Ваша сумма в" + sum + " рублей успешно зачислена");
-
+                    alert("Ваша сумма в " + sum + " рублей успешно зачислена");
+                    break;
                 case "1":
-                    alert("Ваша сумма в" + sum + " рубль успешно зачислена");
-
+                    alert("Ваша сумма в " + sum + " рубль успешно зачислена");
+                    break;
                 case "2":
                 case "3":
                 case "4":
                     alert("Ваша сумма в " + sum + " рубля успешно зачислена");
             }
+            //если предпоследняя цифра равна 1 тогда цифры будутзаканчиваться на формулировку -надцать и верная формулировака "-рублей"    
         } else {
             alert("Ваша сумма в " + sum + " рублей успешно зачислена");
 

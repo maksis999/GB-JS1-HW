@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Число в объект</title>
+</head>
+
+<body>
+  <script>
+
+    let num = +prompt("Введите число от 0 до 999");
+
+    function getDigitsOfNumber(num) {
+      return {
+        units: num % 10,
+        tens: Math.floor(num / 10) % 10,
+        hundereds: Math.floor(num / 100),
+      };
+    }
+    alert("Результат преобрзаования числа в объект в console");
+    console.log(getDigitsOfNumber(num));
+  </script>
+</body>
+
+</html>
